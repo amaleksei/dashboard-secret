@@ -38,5 +38,5 @@ lerna-debug.log*
 .*.env
 
 # Project Folders
-postgresdata
+postgresdata/*
 !postgresdata/.gitkeep
