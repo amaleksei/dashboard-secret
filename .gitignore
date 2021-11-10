@@ -39,3 +39,4 @@ lerna-debug.log*
 
 # Project Folders
 postgresdata
+!postgresdata/.gitkeep
