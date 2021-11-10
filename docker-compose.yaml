@@ -4,9 +4,9 @@ services:
   postgres:
     container_name: postgres_container
     image: postgres
+    env_file:
+      - .env
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       PGDATA: /data/postgres
     volumes:
       - ./postgresdata:/data/postgres
@@ -19,6 +19,8 @@ services:
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
+    env_file:
+      - .env
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
